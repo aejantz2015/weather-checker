@@ -15,16 +15,98 @@
 
     <main>
         <div>
+            <!-- search button to find a city -->
         <h2 class = >Search for a City</h2>
             <div class = "input-group ">
                 <input type = "text" class = "form" id = "citySearch">
-                    <button class = "btn btn-warning" id = "searchButton" type = "button">Search <i class="fa fa-search"></i>
+                    <button class = "btn btn-warning btn-sm" id = "searchButton" type = "button">Search <i class="fa fa-search"></i>
                     </button>
             </div>
         </div>
         <div>
-            <button class = "btn btn-warning" id = "clearHistory" type = "button">Clear History <i class="fa-solid fa-clock-rotate-left"></i>
+            <!-- button to clear the search history -->
+            <button class = "btn btn-warning btn-sm" id = "clearHistory" type = "button">Clear History <i class="fa fa-solid fa-clock-rotate-left"></i>
         </div>
+
+        <div class = "card">
+            <div class = "card-body">
+                <h2 class= "card-title d-inline-flex align-items-center lead font-weight-bold" style = "height: 50px">
+                    <span id = "nameCity">Name of Current City</span>
+                    <span class = "px-1" id = "currentDate">- MM/DD/YYYY</span>
+                </h2>
+                <p class="card-text">
+                Temperature: 
+                <span id="todayTemp">--</span>
+                </p>
+                <p class="card-text">
+                Humidity: 
+                <span id="todayHumid">--</span>
+                </p>
+                <p class="card-text">
+                Wind Speed: 
+                <span id="todayWind">--</span>
+                </p>
+            </div>
+        </div>
+        <div class="px-3">
+            <h2 class="card-title d-flex align-items-center lead font-weight-bold mt-2 mb-2" style="height: 25px">
+              5-Day Outlook:
+            </h2>
+            <div class="row justify-content-between">
+                <div class="col-sm-2 card-body bg-danger text-white mb-3">
+                    <p class="card-title font-weight-bold" id="dayOne">MM/DD/YYYY</p>
+                    <p class="card-text" style="height: 100px">
+                    <p class="card-text">Temperature:
+                        <spanid id="tempOne">--</span>
+                    </p>
+                    <p class="card-text">Humidity:
+                        <span id="humidityOne">--</span>
+                    </p>
+                </div>
+                <div class="col-sm-2 card-body bg-danger text-white mb-3">
+                    <p class="card-title font-weight-bold" id="dayTwo">MM/DD/YYYY</p>
+                    <p class="card-text" style="height: 100px">
+                    <p class="card-text">Temperature:
+                        <spanid id="tempTwo">--</span>
+                    </p>
+                    <p class="card-text">Humidity:
+                        <span id="humidityTwo">--</span>
+                    </p>
+                </div>
+                <div class="col-sm-2 card-body bg-danger text-white mb-3">
+                    <p class="card-title font-weight-bold" id="dayThree">MM/DD/YYYY</p>
+                    <p class="card-text" style="height: 100px">
+                    <p class="card-text">Temperature:
+                        <spanid id="tempThree">--</span>
+                    </p>
+                    <p class="card-text">Humidity:
+                        <span id="humiditythree">--</span>
+                    </p>
+                </div>
+                <div class="col-sm-2 card-body bg-danger text-white mb-3">
+                    <p class="card-title font-weight-bold" id="dayFour">MM/DD/YYYY</p>
+                    <p class="card-text" style="height: 100px">
+                    <p class="card-text">Temperature:
+                        <spanid id="tempFour">--</span>
+                    </p>
+                    <p class="card-text">Humidity:
+                        <span id="humidityFour">--</span>
+                    </p>
+                </div>
+                <div class="col-sm-2 card-body bg-danger text-white mb-3">
+                    <p class="card-title font-weight-bold" id="dayFive">MM/DD/YYYY</p>
+                    <p class="card-text" style="height: 100px">
+                    <p class="card-text">Temperature:
+                        <spanid id="tempFive">--</span>
+                    </p>
+                    <p class="card-text">Humidity:
+                        <span id="humidityFive">--</span>
+                    </p>
+                </div>
+
     </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/script.js"></script>
 </body>
 </html>
