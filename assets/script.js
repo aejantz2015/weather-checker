@@ -8,6 +8,7 @@ var todayTemp = document.getElementById("todayTemp")
 var todayHumid = document.getElementById("todayHumid")
 var todayWind = document.getElementById("todayWind")
 var forcast = document.getElementById("forcast")
+var futureTemp = document.getElementById("tempOne")
 
 function citySearch() {
     var cityName = cityInput.value
@@ -33,21 +34,7 @@ function getWeatherData(cityName) {
         })
 
 }
-function displayForcastData(forcastData){
-    forcast.textContent=""
-    for (var i=4; i < forcastData.list.length; i = i+8){
-        forcast.innerHTML+=`<div class="col-sm-2 card-body bg-danger text-white mb-3">
-        <p class="card-title font-weight-bold" id="dayOne">${dayjs.unix(forcastData.list[i].dt).format("MM/DD/YYYY")}</p>
-        <p class="card-text" style="height: 75px">
-        <p class="card-text">Temperature:
-            <span id="tempOne">--</span>
-        </p>
-        <p class="card-text">Humidity:
-            <span id="humidityOne">--</span>
-        </p>
-    </div>`
-    }
-}
+
 function displayCurrentData(currentData){
     cityName.textContent = currentData.name
     currentDay.textContent = dayjs.unix(currentData.dt).format("MM/DD/YYYY")
@@ -55,6 +42,24 @@ function displayCurrentData(currentData){
     todayTemp.textContent = currentData.main.temp
     todayHumid.textContent = currentData.main.humidity
     todayWind.textContent = currentData.wind.speed
+}
+function displayForcastData(forcastData){
+    forcast.textContent=""
+    for (var i=4; i < forcastData.list.length; i = i+8){
+        forcast.innerHTML+=`<div class="col-sm-2 card-body bg-danger text-white mb-3">
+        <p class="card-title font-weight-bold" id="dayOne">${dayjs.unix(forcastData.list[i].dt).format("MM/DD/YYYY")}</p>
+        <p class="card-text" style="height: 75px">
+        <p class="card-text">Temperature:
+            <span id="tempOne">${forcastData.list[i].main.temp}</span>
+        </p>
+        <p class="card-text">Humidity:
+            <span id="humidityOne">${forcastData.list[i].main.humidity}</span>
+        </p>
+        <p class="card-text">Wind Speed:
+            <span id="windOne">${forcastData.list[i].wind.speed}</span>
+        </p>
+    </div>`
+}
 }
 
 searchButton.addEventListener("click", citySearch)
