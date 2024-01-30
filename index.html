@@ -21,13 +21,10 @@
                 <input type = "text" class = "form" id = "citySearch">
                     <button class = "btn btn-warning btn-sm" id = "searchButton" type = "button">Search <i class="fa fa-search"></i>
                     </button>
+                    <datalist class = "searchData"></datalist>
             </div>
         </div>
-        <div>
-            <!-- button to clear the search history -->
-            <button class = "btn btn-warning btn-sm" id = "clearHistory" type = "button">Clear History <i class="fa fa-solid fa-clock-rotate-left"></i>
-        </div>
-
+        <!-- card for the current day -->
         <div class = "card">
             <div class = "card-body">
                 <h2 class= "card-title d-flex align-items-center lead font-weight-bold" style = "height: 50px">
@@ -49,6 +46,7 @@
                 </p>
             </div>
         </div>
+        <!-- cards for the furture days after this -->
         <div class="px-3">
             <h2 class="card-title d-flex align-items-center lead font-weight-bold mt-2 mb-2" style="height: 25px">
               5-Day Outlook:
