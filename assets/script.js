@@ -69,6 +69,15 @@ document.querySelector("#searchButton").addEventListener("click", () => {
   localStorage.setItem("City", cityHistory);
 });
 
+function searchHistory() {
+    var recent = []
 
+    $.each(recent, function(index, value) {
+        const p = document.innerHTML.createElement("p")
+        p.innerHTML = value
+        document.getElementById("#searchData").appendChild
+    })
+}
+searchButton.addEventListener("click", searchHistory)
 searchButton.addEventListener("click", citySearch)
 
