@@ -1,7 +1,6 @@
-# weather-checker
 # Challenge Name
 
-Calendar-Scheduler
+Weather Checker
 
 ## Description
 
@@ -10,7 +9,7 @@ This project was a Weather applicaiton that displays the current dates weather a
 
 ## Usage
 
-[Weather-App]()
+[Weather-App](https://aejantz2015.github.io/weather-checker/)
 
 ![Screenshot](./assets/Screenshot.png)
 
